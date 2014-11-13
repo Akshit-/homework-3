@@ -121,7 +121,7 @@ var bars = redditSvg.selectAll(".bar")
   //   .attr("transform", "translate(0," + height + ")")
   //   .call(xAxis);
 
-bars.transition().duration(500)
+bars.transition().duration(100)
     .selectAll("rect")
     .attr("x", 1)
     .attr("width", x(data[0].dx) - 1)
@@ -145,7 +145,7 @@ bars.exit().select(".xaxis")
 //     .attr("text-anchor", "middle")
 //     .text(function(d) { return formatCount(d.y); });
 
-bars.exit().transition().duration(500)
+bars.exit().transition().duration(100)
     .selectAll("rect")
     .attr("height", function(d) { return height - y(d.y); })
     .remove();
